@@ -1,11 +1,11 @@
-import React from 'react'
-import './About.css'
+import React from 'react';
+import './About.css';
+import { Facebook, Twitter, Mail, Users, Calendar, Award } from 'lucide-react';
+
 const About = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+hoiiiii
+  );
+};
 
-export default About
+export default About;

@@ -1,12 +1,13 @@
 import React from 'react'
 import './Home.css'
-import Footer from './components/Footer/Footer'
+import Header from '../../components/Header/Header'
+import About from '../About/About'
 const Home = () => {
   return (
-    <div>
-      hii
-      <Footer />
-    </div>
+    <>
+    <Header />
+    <About />
+    </>
   )
 }
 

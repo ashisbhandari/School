@@ -96,7 +96,7 @@ const Navbar = () => {
         <div className={`mobile-header ${isScrolled ? 'scrolled' : ''}`}>
           <Link to="/" className="mobile-brand" onClick={closeMobileNav}>
             <img src={ Logo} alt="School Logo" className="mobile-logo" />
-            <span className="mobile-brand-name">Excellence School</span>
+            <span className="mobile-brand-name">School</span>
           </Link>
           
           <button
@@ -119,7 +119,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div className={`mobile-menu ${mobileNavOpen ? 'open' : ''}`}>
           <div className="mobile-menu-header">
-            <h3>Menu</h3>
+            <h3>School</h3>
             <button className="close-btn" onClick={closeMobileNav} aria-label="Close menu">
               ✕
             </button>
