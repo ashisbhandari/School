@@ -53,12 +53,14 @@ const Navbar = () => {
 
           {/* Navigation Menu */}
           <div className="navbar-menu">
-            <Link to="/" className="nav-link">
+            {/* <Link to="/" className="nav-link">
               Home
-            </Link>
-            <Link to="/#about" className="nav-link">
-              About Us
-            </Link>
+            </Link> */}
+            <a href="/#" className="nav-link">Home</a>
+            {/* <Link to="/#about" className="nav-link"> */}
+            <a href="#about" className="nav-link">About Us</a>
+              
+            {/* </Link> */}
             <Link to="/#academics" className="nav-link">
               Academics
             </Link>
@@ -68,7 +70,7 @@ const Navbar = () => {
             <Link to="/#contact" className="nav-link">
               Contact
             </Link>
-            <Link to="/gallery" className="nav-link">
+            <Link to="/#gallery" className="nav-link">
               Gallery
             </Link>
           </div>

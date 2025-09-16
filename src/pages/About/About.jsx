@@ -1,12 +1,37 @@
 import React from 'react';
 import './About.css';
-import { Facebook, Twitter, Mail, Users, Calendar, Award } from 'lucide-react';
+import { Facebook, Twitter, Mail } from 'lucide-react';
+// Import your actual image
 import principal from "../../assets/principal.jpg";
-
 const About = () => {
+  // Replace with your actual image import
+  // const principal = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face";
   
+  // const teamMembers = [
+  //   { 
+  //     name: "mr someone", 
+  //     role: "Vice Principal - Academics", 
+  //     image:"../../assets/principal.jpg"
+  //   },
+  //   { 
+  //     name: "mr bhandari", 
+  //     role: "Vice Principal - Administration", 
+  //     image: "../../assets/principal.jpg"
+  //   },
+  //   { 
+  //     name: "mr ashish", 
+  //     role: "Vice Principal - Student Affairs", 
+  //     image: "../../assets/principal.jpg"
+  //   }
+  // ];
+  const teamMembers = [
+  { name: "mr someone", role: "Vice Principal - Academics", image: principal },
+  { name: "mr bhandari", role: "Vice Principal - Administration", image: principal },
+  { name: "mr ashish", role: "Vice Principal - Student Affairs", image: principal }
+];
+
   return (
-    <div className="about-container">
+    <div className="about-container" id='about'>
       <div className="about-content">
         {/* Main Content Box */}
         <div className="main-content-box">
@@ -21,13 +46,13 @@ const About = () => {
                   <h2>Dr. Ashish Bhandari</h2>
                   <p className="principal-title">Principal</p>
                   <div className="social-links">
-                    <a href="#" className="social-link facebook">
+                    <a href="#" className="social-link facebook" aria-label="Facebook">
                       <Facebook size={20} />
                     </a>
-                    <a href="#" className="social-link twitter">
+                    <a href="#" className="social-link twitter" aria-label="Twitter">
                       <Twitter size={20} />
                     </a>
-                    <a href="#" className="social-link email">
+                    <a href="#" className="social-link email" aria-label="Email">
                       <Mail size={20} />
                     </a>
                   </div>
@@ -42,11 +67,7 @@ const About = () => {
             <div className="team-section">
               <h3 className="section-title">Leadership Team</h3>
               <div className="team-grid">
-                {[
-                  { name: "Michael Chen", role: "Vice Principal - Academics", image:{principal} },
-                  { name: "Emily Rodriguez", role: "Vice Principal - Administration", image:{principal} },
-                  { name: "James Wilson", role: "Vice Principal - Student Affairs", image: "../../assets/principal.jpg" }
-                ].map((member, index) => (
+                {teamMembers.map((member, index) => (
                   <div key={index} className="team-member">
                     <div className="member-image">
                       <img src={member.image} alt={member.name} />
@@ -54,9 +75,15 @@ const About = () => {
                     <h4>{member.name}</h4>
                     <p className="member-role">{member.role}</p>
                     <div className="member-social">
-                      <a href="#" className="social-icon"><Facebook size={16} /></a>
-                      <a href="#" className="social-icon"><Twitter size={16} /></a>
-                      <a href="#" className="social-icon"><Mail size={16} /></a>
+                      <a href="#" className="social-icon" aria-label="Facebook">
+                        <Facebook size={16} />
+                      </a>
+                      <a href="#" className="social-icon" aria-label="Twitter">
+                        <Twitter size={16} />
+                      </a>
+                      <a href="#" className="social-icon" aria-label="Email">
+                        <Mail size={16} />
+                      </a>
                     </div>
                   </div>
                 ))}

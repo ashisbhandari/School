@@ -1,10 +1,10 @@
+/* About Container */
 .about-container {
-  max-width:100%;
-  margin: 20px;
-  border-radius:10px;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
   padding: 2rem;
   font-family: 'Arial', sans-serif;
-  
 }
 
 .about-content {
@@ -25,7 +25,7 @@
 }
 
 /* Left Column - Principal */
-/* .left-column {
+.left-column {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -40,57 +40,71 @@
 }
 
 .principal-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .principal-image {
+  width: 100%;
+  height: 100%;
   position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid #4a90e2;
-  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
 }
 
 .principal-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.principal-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  color: #000;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .principal-info h2 {
-  margin: 0;
-  color: #2c3e50;
+  margin: 5px 0;
   font-size: 2rem;
   font-weight: 600;
+  color: #2c3e50;
 }
 
 .principal-title {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0.2rem 0 1rem;
   color: #7f8c8d;
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-  font-weight: 500;
 }
 
 .social-links {
+  margin-top: 5px;
   display: flex;
-  gap: 1rem;
   justify-content: center;
+  gap: 12px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
+  transform: translateY(0);
 }
 
 .social-link.facebook {
@@ -111,81 +125,6 @@
 .social-link:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-} */
-.principal-card {
-  position: relative;
-  width: 100%;
-  height: 80%; /* adjust as you want */
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.principal-image img {
-  width: 100%;
-  height: 100%;
-  object-fit:cover; /* makes image cover fully */
-  display: block;
-}
-
-.principal-info {
-  position:absolute;
-  bottom: 0; /* stick to bottom */
-  left: 0;
-  width: 100%;
-  padding: 15px;
-  color: #000000ff;
-  text-align: center;
-
-  /* Blurry black background */
-  background:transparent; /* semi-transparent black */
-  backdrop-filter: blur(10px); /* blur effect */
-}
-
-.principal-info h2 {
-  margin: 5px 0;
-  font-size: 2.2rem;
-}
-
-.principal-title {
-  font-size: 1.6rem;
-  opacity: 1;
-}
-
-.social-links {
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.social-link.facebook {
-  background: #3b5998;
-  color: white;
-}
-
-.social-link.twitter {
-  background: #1da1f2;
-  color: white;
-}
-
-.social-link.email {
-  background: #ea4335;
-  color: white;
-}
-
-
-.social-link:hover {
-  color: #ffd700; /* gold on hover */
 }
 
 /* Right Column */
@@ -210,16 +149,17 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
 .team-member {
   text-align: center;
-  padding:3rem;
-  border-radius: 10px;
-  background: #fafcfbff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: #fafcfb;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(74, 144, 226, 0.1);
 }
 
 .team-member:hover {
@@ -228,9 +168,9 @@
 }
 
 .member-image {
-  width: 250px;
-  height: 240px;
-  margin: 0 auto 0.8rem;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #4a90e2;
@@ -244,16 +184,16 @@
 
 .team-member h4 {
   color: #2c3e50;
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
   font-size: 1.3rem;
   font-weight: 600;
 }
 
 .member-role {
   color: #7f8c8d;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .member-social {
@@ -285,9 +225,8 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 15px;
   padding: 2rem;
-  color: black;
+  color: white;
   text-align: center;
-
 }
 
 .description-content h3 {
@@ -299,51 +238,220 @@
 .description-content p {
   font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 0.6rem;
-  opacity: 1;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.description-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* Responsive Design */
+
+/* Large Tablets and Small Laptops (1024px and below) */
 @media (max-width: 1024px) {
   .main-content-box {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .principal-card {
+    height: 450px;
+  }
+  .social-link {
+  width: 25px;
+  height: 25px;
+}
+  .principal-info h2 {
+    font-size: 1.6rem;
   }
   
   .team-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
 
+/* Tablets (768px and below) */
 @media (max-width: 768px) {
   .about-container {
+    margin: 10px;
     padding: 1rem;
   }
 
   .main-content-box {
-    padding: 2rem 1.5rem;
-    grid-template-columns: 1fr;
+    padding: 1.5rem;
     gap: 2rem;
+  }
+
+  .principal-card {
+    height: 400px;
+  }
+
+  .principal-info {
+    padding: 5px;
+  }
+
+  .principal-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .principal-title {
+    font-size: 0.7rem;
+  }
+
+  .social-links {
+    gap: 8px;
+  }
+
+  .social-link {
+    width: 25px;
+    height: 25px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .team-member {
+    padding: 1rem;
+  }
+
+  .member-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-member h4 {
+    font-size: 1.1rem;
+  }
+
+  .member-role {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .description-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .description-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .about-container {
+    margin: 5px;
+    padding: 0.5rem;
+  }
+
+  .main-content-box {
+    padding: 1rem;
+    border-radius: 15px;
+    gap: 1.5rem;
+  }
+
+  .principal-card {
+    height: 300px;
+  }
+
+  .principal-info {
+    padding: 1px;
+  }
+
+  .principal-info h2 {
+    font-size: 1rem;
+  }
+
+  .principal-title {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    gap: 6px;
+  }
+
+  .social-link {
+    width: 25px;
+    height: 25px;
   }
 
   .team-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .section-title,
-  .description-content h3 {
-    font-size: 1.5rem;
+
+  .team-member {
+    padding: 1rem;
   }
 
-  .stat-number {
-    font-size: 2rem;
+  .member-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-member h4 {
+    font-size: 1rem;
+  }
+
+  .member-role {
+    font-size: 0.85rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .description-section {
+    padding: 1rem;
+  }
+
+  .description-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .description-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .member-social {
+    gap: 0.3rem;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
   }
 }
 
-@media (max-width: 480px) {
-  .principal-image {
-    width: 120px;
-    height: 120px;
+/* Very Small Devices (360px and below) */
+@media (max-width: 360px) {
+  .about-container {
+    padding: 0.25rem;
+  }
+
+  .main-content-box {
+    padding: 0.75rem;
+  }
+
+  .principal-card {
+    height: 250px;
+  }
+
+  .principal-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .team-member {
+    padding: 0.75rem;
   }
 
   .member-image {
@@ -355,12 +463,7 @@
     font-size: 1.3rem;
   }
 
-  .stat-number {
-    font-size: 1.8rem;
-  }
-  
-  .stat-icon {
-    width: 50px;
-    height: 50px;
+  .description-content p {
+    font-size: 0.9rem;
   }
 }
