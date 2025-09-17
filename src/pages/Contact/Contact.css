@@ -156,7 +156,11 @@
   margin: 0;
 }
 
-/* Mobile View - Column Layout */
+@media (max-width: 1040px) {
+  .contact-left{
+    display:none;
+  }
+}
 @media (max-width: 768px) {
   .contact {
     flex-direction: column;
@@ -172,8 +176,10 @@
   }
   
   .contact-left {
-    order: 1;
+    display:none;
   }
+
+
   
   .contact-center {
     order: 2;
@@ -200,8 +206,7 @@
 
 @media (max-width: 480px) {
   .contact {
-    padding: 30px 15px;
-    gap: 20px;
+    padding:0px;=
   }
   
   .contact-center {
@@ -210,6 +215,9 @@
   
   .contact-right {
     padding: 15px;
+  }
+  .contact-left{
+    display:none;
   }
   
   .contact-form {

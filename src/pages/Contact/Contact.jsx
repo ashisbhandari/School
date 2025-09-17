@@ -1,6 +1,6 @@
 import React from 'react'
 import './Contact.css'
-import cartoon from '../../assets/image.png'
+import cartoon from '../../assets/cartoon-cnt.png'
 
 const Contact = () => {
   return (
