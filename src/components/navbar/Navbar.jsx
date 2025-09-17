@@ -64,15 +64,18 @@ const Navbar = () => {
             <Link to="/#academics" className="nav-link">
               Academics
             </Link>
-            <Link to="/#news" className="nav-link">
+            {/* <Link to="/#news" className="nav-link">
               News
-            </Link>
-            <Link to="/#contact" className="nav-link">
+            </Link> */}
+            <a href="/#news" className='nav-link'>News</a>
+            {/* <Link to="/#contact" className="nav-link">
               Contact
-            </Link>
-            <Link to="/#gallery" className="nav-link">
+            </Link> */}
+            <a href="/#contact" className='nav-link'>Contact</a>
+            {/* <Link to="/#gallery" className="nav-link">
               Gallery
-            </Link>
+            </Link> */}
+            <a href="/#gallery" className='nav-link'>Gallery</a>
           </div>
 
           {/* Contact Info & Login */}
@@ -128,7 +131,7 @@ const Navbar = () => {
           </div>
 
           <div className="mobile-nav-links">
-            <Link to="/" className="mobile-nav-link" onClick={closeMobileNav}>
+            {/* <Link to="/" className="mobile-nav-link" onClick={closeMobileNav}>
               <span>Home</span>
             </Link>
             <Link to="/#about" className="mobile-nav-link" onClick={closeMobileNav}>
@@ -145,7 +148,14 @@ const Navbar = () => {
             </Link>
             <Link to="/gallery" className="mobile-nav-link" onClick={closeMobileNav}>
               <span>Gallery</span>
-            </Link>
+            </Link> */}
+            <a href="/#" className="mobile-nav-link" onClick={closeMobileNav}>Home</a>
+            <a href="#about" className="mobile-nav-link" onClick={closeMobileNav}>About Us</a>
+            <a href="/#news" className='mobile-nav-link' onClick={closeMobileNav}>News</a>
+            
+            <a href="/#contact" className='mobile-nav-link' onClick={closeMobileNav}>Contact</a>
+            
+            <a href="/#gallery" className='mobile-nav-link' onClick={closeMobileNav}>Gallery</a>
           </div>
 
           <div className="mobile-contact-section">

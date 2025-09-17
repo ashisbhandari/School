@@ -3,7 +3,7 @@ import './News.css'
 const News = () => {
   return (
     <div>
-      
+      hello ajako news ma galwko xu
     </div>
   )
 }

@@ -3,7 +3,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <div>
-      <footer class="text-white text-center text-md-start">
+      {/* <footer class="text-white text-center text-md-start"> */}
     <div class="container" id="footer">
       <div class="row align-items-start gy-4">
         <div class="col-md-3 d-none d-md-block">
@@ -61,7 +61,7 @@ const Footer = () => {
 
       <p class="small text-center text-muted mb-0">&copy; {{ year }} Bhandu's Academy. All Rights Reserved.</p>
     </div>
-  </footer>
+  {/* </footer> */}
     </div>
   )
 }
