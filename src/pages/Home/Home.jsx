@@ -6,12 +6,14 @@ import Contact from '../Contact/Contact'
 import Footer from '../../components/footer/Footer'
 import News from '../News/News'
 import Gallery from '../Gallery/Gallery'
+import Academic from '../Academic/Academic'
 const Home = () => {
   return (
     <>
     <Header />
     <About />
     <News />
+    <Academic />
     <Contact />
     <Gallery />
     </>

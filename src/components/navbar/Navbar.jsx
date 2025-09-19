@@ -61,7 +61,7 @@ const Navbar = () => {
             <a href="#about" className="nav-link">About Us</a>
               
             {/* </Link> */}
-            <Link to="/#academics" className="nav-link">
+            <Link to="/#academic" className="nav-link">
               Academics
             </Link>
             {/* <Link to="/#news" className="nav-link">
@@ -88,7 +88,7 @@ const Navbar = () => {
                 info@school.edu.np
               </a>
             </div>
-            <Link to="/login" className="login-btn">
+            <Link to="/#" className="login-btn">
               Login
             </Link>
           </div>
@@ -173,7 +173,7 @@ const Navbar = () => {
           </div>
 
           <div className="mobile-login-section">
-            <Link to="/login" className="mobile-login-btn" onClick={closeMobileNav}>
+            <Link to="/#" className="mobile-login-btn" onClick={closeMobileNav}>
               Login
             </Link>
           </div>
