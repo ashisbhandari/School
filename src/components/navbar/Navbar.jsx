@@ -60,10 +60,7 @@ const Navbar = () => {
             {/* <Link to="/#about" className="nav-link"> */}
             <a href="#about" className="nav-link">About Us</a>
               
-            {/* </Link> */}
-            <Link to="/#academic" className="nav-link">
-              Academics
-            </Link>
+            
             {/* <Link to="/#news" className="nav-link">
               News
             </Link> */}

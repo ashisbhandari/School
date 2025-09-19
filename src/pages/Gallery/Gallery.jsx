@@ -7,26 +7,42 @@ const Gallery = () => {
   return (
     <div className='gallery' id='gallery'>
       <div className="title text-center">
-        <h1>Gallery</h1>
-        <p>click each album to Explore more photo or video</p>
-      </div>
-      <div className="album">
-        <div className="album-left">
-          <img src={img} alt="album" />
-          <p>Awards</p>
-        </div>
-        <div className="album-center">
-          <img src={img} alt="album" />
-          <p>Awards</p>
-        </div>
-        <div className="album-right">
-          <img src={img} alt="album" />
-          <p>Awards</p>
-        </div>
+        <p>Explore more photos or videos through Album</p>
       </div>
 
-      <img src={img} alt="hii" />
-      <img src={cartoon} alt="hello" />
+      <div className="album-container">
+        <div className="album-item">
+          <div className="album-image-wrapper">
+            <img src={img} alt="Awards album" />
+            <div className="album-overlay">
+              <span> View Album</span>
+            </div>
+          </div>
+          <p className="album-title">Awards</p>
+        </div>
+
+        <div className="album-item">
+          <div className="album-image-wrapper">
+            <img src={img} alt="Events album" />
+            <div className="album-overlay">
+              <span>View Album</span>
+            </div>
+          </div>
+          <p className="album-title">Events</p>
+        </div>
+
+        <div className="album-item">
+          <div className="album-image-wrapper">
+            <img src={img} alt="Memories album" />
+            <div className="album-overlay">
+              <span>View Album</span>
+            </div>
+          </div>
+          <p className="album-title">Memories</p>
+        </div>
+      </div>
+      
+
     </div>
   )
 }

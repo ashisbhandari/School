@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+// import Contact from '../../pages/Contact/Contact'
 
 const Header = () => {
   return (
@@ -17,8 +18,13 @@ const Header = () => {
           to grow academically, socially, and personally. Join us in building a brighter tomorrow.
         </p>
         <div className="btn-group">
-          <button>View Gallery</button>
-          <button className="secondary-btn">Contact Us</button>
+          <button onClick={()=>{
+            document.getElementById("gallery").scrollIntoView();
+          }}>View Gallery</button>
+          <button className="secondary-btn" onClick={()=>{
+            document.getElementById('contact').scrollIntoView();
+          }
+          }>Contact Us</button>
         </div>
       </div>
     </div>
