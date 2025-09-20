@@ -12,43 +12,29 @@
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
 }
-
-/* Title Section */
 .title {
   margin-bottom: 60px;
 }
 
-.title h1 {
-  font-size: 3rem;
+.title h3 {
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: black;
   margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.title p {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-  font-weight: 300;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
 }
 
 .text-center {
   text-align: center;
 }
-
-/* Album Container */
 .album-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   margin-bottom: 60px;
 }
-
-/* Album Items */
 .album-item {
   background: white;
   border-radius: 15px;
@@ -68,9 +54,8 @@
 
 }
 .album-item {
-  overflow: hidden; /* keeps zoom inside */
+  overflow: hidden; 
 }
-
 .album-image-wrapper {
   transition: transform 0.4s ease;
 }
@@ -145,6 +130,20 @@
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+.video {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.video img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 
 @media (max-width: 768px) {
   .gallery {

@@ -1,8 +1,9 @@
+// Update your Navbar component with these changes:
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from "../../assets/logo.png";
-
 
 const Navbar = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -38,44 +39,52 @@ const Navbar = () => {
     setMobileNavOpen(false);
   };
 
+  // NEW: Handle mobile nav link clicks with smooth scrolling
+  const handleMobileNavClick = (e, targetId) => {
+    // Don't prevent default for external links or home
+    if (targetId === '/' || targetId === '/#') {
+      closeMobileNav();
+      return;
+    }
+
+    // For hash links, handle the scrolling manually
+    e.preventDefault();
+    
+    // Close the mobile nav first
+    setMobileNavOpen(false);
+    
+    // Wait a bit for the nav to close, then scroll
+    setTimeout(() => {
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 300); // Adjust timing if needed
+  };
+
   return (
     <>
-      {/* Desktop Navigation */}
+      {/* Desktop Navigation - keep as is */}
       <nav className={`navbar-desktop ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
-          {/* Logo Section */}
           <div className="navbar-brand">
             <Link to="/" className="brand-link">
-              <img src={ Logo} alt="School Logo" className="brand-logo" />
+              <img src={Logo} alt="School Logo" className="brand-logo" />
               <span className="brand-name">School</span>
             </Link>
           </div>
 
-          {/* Navigation Menu */}
           <div className="navbar-menu">
-            {/* <Link to="/" className="nav-link">
-              Home
-            </Link> */}
             <a href="/#" className="nav-link">Home</a>
-            {/* <Link to="/#about" className="nav-link"> */}
             <a href="#about" className="nav-link">About Us</a>
-              
-            
-            {/* <Link to="/#news" className="nav-link">
-              News
-            </Link> */}
             <a href="/#news" className='nav-link'>News</a>
-            {/* <Link to="/#contact" className="nav-link">
-              Contact
-            </Link> */}
             <a href="/#contact" className='nav-link'>Contact</a>
-            {/* <Link to="/#gallery" className="nav-link">
-              Gallery
-            </Link> */}
             <a href="/#gallery" className='nav-link'>Gallery</a>
           </div>
 
-          {/* Contact Info & Login */}
           <div className="navbar-actions">
             <div className="contact-info">
               <a href="tel:+9779800000000" className="contact-item">
@@ -94,10 +103,9 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div className="navbar-mobile">
-        {/* Mobile Header */}
         <div className={`mobile-header ${isScrolled ? 'scrolled' : ''}`}>
           <Link to="/" className="mobile-brand" onClick={closeMobileNav}>
-            <img src={ Logo} alt="School Logo" className="mobile-logo" />
+            <img src={Logo} alt="School Logo" className="mobile-logo" />
             <span className="mobile-brand-name">School</span>
           </Link>
           
@@ -113,12 +121,11 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Overlay */}
         {mobileNavOpen && (
           <div className="mobile-overlay" onClick={closeMobileNav}></div>
         )}
 
-        {/* Mobile Menu */}
+        {/* UPDATED: Mobile Menu with fixed navigation */}
         <div className={`mobile-menu ${mobileNavOpen ? 'open' : ''}`}>
           <div className="mobile-menu-header">
             <h3>School</h3>
@@ -128,31 +135,42 @@ const Navbar = () => {
           </div>
 
           <div className="mobile-nav-links">
-            {/* <Link to="/" className="mobile-nav-link" onClick={closeMobileNav}>
-              <span>Home</span>
-            </Link>
-            <Link to="/#about" className="mobile-nav-link" onClick={closeMobileNav}>
-              <span>About Us</span>
-            </Link>
-            <Link to="/#academics" className="mobile-nav-link" onClick={closeMobileNav}>
-              <span>Academics</span>
-            </Link>
-            <Link to="/#news" className="mobile-nav-link" onClick={closeMobileNav}>
-              <span>News</span>
-            </Link>
-            <Link to="/#contact" className="mobile-nav-link" onClick={closeMobileNav}>
-              <span>Contact</span>
-            </Link>
-            <Link to="/gallery" className="mobile-nav-link" onClick={closeMobileNav}>
-              <span>Gallery</span>
-            </Link> */}
-            <a href="/#" className="mobile-nav-link" onClick={closeMobileNav}>Home</a>
-            <a href="#about" className="mobile-nav-link" onClick={closeMobileNav}>About Us</a>
-            <a href="/#news" className='mobile-nav-link' onClick={closeMobileNav}>News</a>
-            
-            <a href="/#contact" className='mobile-nav-link' onClick={closeMobileNav}>Contact</a>
-            
-            <a href="/#gallery" className='mobile-nav-link' onClick={closeMobileNav}>Gallery</a>
+            {/* Updated mobile navigation links */}
+            <a 
+              href="/#" 
+              className="mobile-nav-link" 
+              onClick={(e) => handleMobileNavClick(e, '/#')}
+            >
+              Home
+            </a>
+            <a 
+              href="#about" 
+              className="mobile-nav-link" 
+              onClick={(e) => handleMobileNavClick(e, '#about')}
+            >
+              About Us
+            </a>
+            <a 
+              href="/#news" 
+              className='mobile-nav-link' 
+              onClick={(e) => handleMobileNavClick(e, '#news')}
+            >
+              News
+            </a>
+            <a 
+              href="/#contact" 
+              className='mobile-nav-link' 
+              onClick={(e) => handleMobileNavClick(e, '#contact')}
+            >
+              Contact
+            </a>
+            <a 
+              href="/#gallery" 
+              className='mobile-nav-link' 
+              onClick={(e) => handleMobileNavClick(e, '#gallery')}
+            >
+              Gallery
+            </a>
           </div>
 
           <div className="mobile-contact-section">

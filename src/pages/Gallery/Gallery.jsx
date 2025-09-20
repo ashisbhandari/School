@@ -7,7 +7,7 @@ const Gallery = () => {
   return (
     <div className='gallery' id='gallery'>
       <div className="title text-center">
-        <p>Explore more photos or videos through Album</p>
+        <h3>Explore more photos or videos through Album</h3>
       </div>
 
       <div className="album-container">
@@ -41,7 +41,9 @@ const Gallery = () => {
           <p className="album-title">Memories</p>
         </div>
       </div>
-      
+      <div className="video">
+        <img src={cartoon} alt="hii" />
+      </div>
 
     </div>
   )
