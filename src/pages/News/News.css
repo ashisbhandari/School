@@ -387,3 +387,155 @@
     flex-direction: column;
   }
 }
+.form-buttons{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
+
+/* Add News Form Styles */
+.add-news-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.add-news-form h2 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+.form-group input[type="file"] {
+  padding: 8px;
+  border: 2px dashed #bdc3c7;
+  background: #f8f9fa;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: #3498db;
+  background: #ecf0f1;
+}
+
+.form-group input[type="date"] {
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1f4e79);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design for Add News Form */
+@media (max-width: 768px) {
+  .add-news-form {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+
+  .add-news-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-news-form {
+    padding: 15px;
+    margin: 5px;
+  }
+
+  .add-news-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+}
