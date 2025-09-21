@@ -14,7 +14,7 @@ const Home_Admin = () => {
     <>
     <Header />
     <Add_News />
-    {/* <Contact_Admin /> */}
+    <Contact_Admin />
     </>
   )
 }

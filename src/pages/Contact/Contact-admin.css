@@ -1,0 +1,23 @@
+/* Contact Admin Component Styles */
+.contact {
+  padding: 2rem;
+  
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ok {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.ok h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
